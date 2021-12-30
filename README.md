@@ -1,18 +1,25 @@
-1 OBJECTIVES 
+ OBJECTIVES 
+
+
 1.To understand the representation permutation. 
 2.Able to generate permutation from a set of data.
+
 2 EQUIPMENTS
 1.Personal Computer.
 2.R Software.
 3 SYNOPSIS & THEORY
 3.1 PERMUTATION
+
 Permutation of a set of distinct objects is an ordered arrangement of these objects. 
 for example permutation of S = {1, 2, 3}, is the ordered arrangement of 1, 2, 3:.
 {1, 2, 3}, {1, 3, 2}, {2, 1, 3}, {2, 3, 1}, {3, 1, 2} and {3, 2, 1}.
+
 Theorem:
 If n is a positive integer and r is an integer with 1 ≤ r ≤ n, then there are
 P (n, r ) = n(n − 1)(n − 2) · · · (n − r + 1)
 r -permutations of a set with n distinct elements.
+
+
 3.2 GENERATING PERMUTATION
 Any set with n elements can be placed in one-to-one correspondence with the set {1, 2, 3, · · · , n}. 
 We can list the permutations of any set of n elements by generating the permutations of the n 
@@ -47,8 +54,12 @@ x[1,] := a1 a2 . . . an
 for i = 2 to r
 x[i,] := nextpermutation(x[i-1,])
 {x1 x2 . . . xr is now all the generated permutation}
+
+
 4 PROCEDURE
+
 4.1 PERMUTATION
+
 1.Open R Gui, and create a new script.
 2.Use knowledge from previous chapter write the factorial function.
 3.Create new function name nextpermutation based on the algorithm above. 
@@ -58,7 +69,10 @@ x[i,] := nextpermutation(x[i-1,])
 5 RESULT
 1.Follow all theprocedures
 2.copy paste all your source codes and output as a result.
-4
+
+
+
+
 Factorial fuction
 : 
 fact<
@@ -79,8 +93,10 @@ fact<
 }
 }Next permutation function
 :
-nextpem<
--function(x)
+
+
+
+nextpem<-function(x)
 {
  n = length(x)
  j = n
@@ -116,10 +132,11 @@ nextpem<
  
 }
  return(x) }
-Permutation function
-:
-pem<
--function(a)
+ 
+ 
+ 
+ 
+Permutation function:pem<-function(a)
 {
  n = length(a)
  r = fact(n)
@@ -136,11 +153,15 @@ pem<
  }
  return(x)
 }
+
+
 Set A & B
 A = c(1,2,3)
 B = c(3,4,5,6)
-Output :
-6
+
+
+
+
 6 DISCUSSION
 Permutation is about how many ways to arrange certain set of number. The total of 
 arrangement can be determined by simply take the number of element inside the set and factorial 
@@ -151,6 +172,7 @@ Total number permutation of A is 3! = 6
 Using the coding, we can automate the permutation process by filling the matrices that we initiate with 
 the permutation array each row. So we can see the number of row is equal to factorial of the number of element 
 inside the set.
+
 7 CONCLUSION
 In conclusion, we can calculate the number of permutation by taking the factorial number of element 
 inside the set. We also learn how to automate the permutation process to further understanding of the 
